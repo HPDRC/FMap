@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0F9FC208-92D7-481F-ACD8-E260F77703ED}</ProjectGuid>
+    <RootNamespace>nfmap</RootNamespace>
+    <SccProjectName>$/Terrafly/Engines/FMap/FMap_datasets</SccProjectName>
+    <SccAuxPath>http://tfs1.cs.fiu.edu:8080/tfs/defaultcollection</SccAuxPath>
+    <SccLocalPath>.</SccLocalPath>
+    <SccProvider>{4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}</SccProvider>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Static</UseOfMfc>
+    <UseOfAtl>Static</UseOfAtl>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <UseOfAtl>Static</UseOfAtl>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>shapelib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+      <Profile>true</Profile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>shapelib.lib;nafxcw.lib;libcmt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>nafxcw.lib libcmt.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="ColorManager.cpp" />
+    <ClCompile Include="configure.cpp" />
+    <ClCompile Include="CoordinateTransformer.cpp" />
+    <ClCompile Include="DataBaseLayerDataSource.cpp" />
+    <ClCompile Include="DoublePoint.cpp" />
+    <ClCompile Include="DoubleRect.cpp" />
+    <ClCompile Include="fmap.cpp" />
+    <ClCompile Include="FMapDraw.cpp" />
+    <ClCompile Include="fmaprequest.cpp" />
+    <ClCompile Include="FMapRequestManager.cpp" />
+    <ClCompile Include="FormatPaintTool.cpp" />
+    <ClCompile Include="ImageTransformer.cpp" />
+    <ClCompile Include="LabelManager.cpp" />
+    <ClCompile Include="LayerDataSource.cpp" />
+    <ClCompile Include="LayersManager.cpp" />
+    <ClCompile Include="LineLayer.cpp" />
+    <ClCompile Include="LineShape.cpp" />
+    <ClCompile Include="mapbits.cpp" />
+    <ClCompile Include="MapCanvas.cpp" />
+    <ClCompile Include="maptree.cpp" />
+    <ClCompile Include="MapUtility.cpp" />
+    <ClCompile Include="MapView.cpp" />
+    <ClCompile Include="Placehoder.cpp" />
+    <ClCompile Include="PointLayer.cpp" />
+    <ClCompile Include="PointShape.cpp" />
+    <ClCompile Include="PolygonLayer.cpp" />
+    <ClCompile Include="PolygonShape.cpp" />
+    <ClCompile Include="QixShapeFileLayerDataSource.cpp" />
+    <ClCompile Include="ShapeLayer.cpp" />
+    <ClCompile Include="ShapeObject.cpp" />
+    <ClCompile Include="shaperecords.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="StringLayerDataSource.cpp" />
+    <ClCompile Include="Utility\Transformer.cpp" />
+    <ClCompile Include="TransInfoManager.cpp" />
+    <ClCompile Include="two_convert.cpp" />
+    <ClCompile Include="Utility\Utility.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ColorManager.h" />
+    <ClInclude Include="configure.h" />
+    <ClInclude Include="CoordinateTransformer.h" />
+    <ClInclude Include="DataBaseLayerDataSource.h" />
+    <ClInclude Include="DoublePoint.h" />
+    <ClInclude Include="DoubleRect.h" />
+    <ClInclude Include="fmap.h" />
+    <ClInclude Include="FMapDraw.h" />
+    <ClInclude Include="FMapRequest.h" />
+    <ClInclude Include="FMapRequestManager.h" />
+    <ClInclude Include="FormatPaintTool.h" />
+    <ClInclude Include="ImageTransformer.h" />
+    <ClInclude Include="LabelManager.h" />
+    <ClInclude Include="LayerDataSource.h" />
+    <ClInclude Include="LayersManager.h" />
+    <ClInclude Include="LineLayer.h" />
+    <ClInclude Include="LineShape.h" />
+    <ClInclude Include="MapCanvas.h" />
+    <ClInclude Include="maptree.h" />
+    <ClInclude Include="MapUtility.h" />
+    <ClInclude Include="MapView.h" />
+    <ClInclude Include="Placehoder.h" />
+    <ClInclude Include="PointLayer.h" />
+    <ClInclude Include="PointShape.h" />
+    <ClInclude Include="PolygonLayer.h" />
+    <ClInclude Include="PolygonShape.h" />
+    <ClInclude Include="QixShapeFileLayerDataSource.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="resource1.h" />
+    <ClInclude Include="shapefil.h" />
+    <ClInclude Include="ShapeLayer.h" />
+    <ClInclude Include="ShapeObject.h" />
+    <ClInclude Include="shaperecords.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="StringLayerDataSource.h" />
+    <ClInclude Include="Utility\Transformer.h" />
+    <ClInclude Include="TransInfoManager.h" />
+    <ClInclude Include="two_convert.h" />
+    <ClInclude Include="Utility\Utility.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="nfmap.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
